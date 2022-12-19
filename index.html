@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Savira</title>
+</head>
+<link rel="stylesheet" href="style.css">
+
+<body>
+    <!-- -------------------------------- MODAL GENERAL -------------------------------- -->
+    <section class="modal__container" id="modalChartPenjualan">
+        <div class="modal__body">
+            <div class="modal__body-header">
+                <div class="modal-close-btn" id="">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M11 0.5C5.15 0.5 0.5 5.15 0.5 11C0.5 16.85 5.15 21.5 11 21.5C16.85 21.5 21.5 16.85 21.5 11C21.5 5.15 16.85 0.5 11 0.5ZM15.05 16.25L11 12.2L6.95 16.25L5.75 15.05L9.8 11L5.75 6.95L6.95 5.75L11 9.8L15.05 5.75L16.25 6.95L12.2 11L16.25 15.05L15.05 16.25Z"
+                            fill="#476270" />
+                    </svg>
+                </div>
+            </div>
+            <div class="modal__body-main">halooo vir</div>
+            <div class="modal__body-footer">
+                <div class="btn">
+                    <button>Lanjut</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gambar">
+        <img src="./bagus.jpg" alt="">
+    </section>
+
+    <script>
+        const lanjutBtn = document.querySelector('.modal__body-footer button');
+
+        const tulisan = [
+            "gausah kaget aku bisa bikin kek gini juga 😂",
+            "ini gara-gara kamu wkwkw",
+            "aku jadi harus belajar untuk bikin script",
+            "meskipun sebelumnya aku gatau sama sekali script itu apaan 😅",
+            "tau sendiri aku mudah interest dan tertantang dengan hal baru",
+            "apalagi mengenai digital kek gini",
+            "jadi mau gamau yaa aku harus belajar",
+            "untungnya di kantor ada yang jago backend dan frontend",
+            "jadi aku bisa belajar, meskipun ini basic katanya hahaa",
+            "btw makasih ya udah pernah ngirimin kek beginian 😊"
+        ];
+
+        let index = 0;
+        lanjutBtn.addEventListener('click', function () {
+            const modalBody = document.querySelector('.modal__body-main');
+            modalBody.innerHTML = tulisan[index];
+            index++;
+            if (index === tulisan.length) {
+                const modalContainer = document.querySelector('.modal__container');
+                modalContainer.style.display = 'none';
+
+                const gambar = document.querySelector('.gambar');
+                gambar.style.display = 'block';
+            }
+        });
+
+        // function tampilkanAlert() {
+        //     alert("Hallo mas bagus");
+        //     alert("Selamat pagi!");
+        //     alert("Ini adalah gambar:");
+
+        //     var gambar = document.createElement("img");
+        //     gambar.src = "https://asset-a.grid.id/crop/0x0:1285x905/700x465/photo/2022/12/04/cristiano-ronaldo-1jpg-20221204045506.jpg";
+        //     gambar.alt = "Gambar";
+        //     document.body.appendChild(gambar);
+        // }
+    </script>
+</body>
+
+</html>
